@@ -1,7 +1,7 @@
 flask==2.3.3
 flask-cors==4.0.0
 langchain-community==0.0.13
-numpy==1.26.0
+numpy==1.26.4
 openai-whisper==20231117
 pyttsx3==2.90
 SpeechRecognition==3.10.0
