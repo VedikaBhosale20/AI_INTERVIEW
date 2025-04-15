@@ -28,10 +28,10 @@ def interview_module():
     llm = Ollama(model="llama3")
     whisper_model = whisper.load_model("base")
     
-    job_description = read_file('/Users/vedikasachinbhosale/Desktop/MINOR_PROJECT/AI_INTERVIEW/jd.txt')
+    job_description = read_file('jd.txt')
 
 
-    candidate_resume = read_json('/Users/vedikasachinbhosale/Desktop/MINOR_PROJECT/AI_INTERVIEW/portfolio.json')
+    candidate_resume = read_json('portfolio.json')
     questions_list = generate_custom_questions(5, job_description , candidate_resume , llm)
 
     for question in questions_list:
@@ -70,7 +70,7 @@ def interview_module():
         
         # After all questions are answered, analyze strengths and weaknesses
     strengths_weaknesses_analysis = analyze_strengths_and_weaknesses(interview_data, llm)
-    portfolio_file = '/Users/vedikasachinbhosale/Desktop/MINOR_PROJECT/AI_INTERVIEW/portfolio.json'
+    portfolio_file = 'portfolio.json'
     add_strengths_and_weaknesses_to_portfolio(portfolio_file, strengths_weaknesses_analysis)
 if __name__ == "__main__":
     interview_module()
